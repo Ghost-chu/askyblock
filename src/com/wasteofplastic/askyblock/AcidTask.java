@@ -40,13 +40,11 @@ public class AcidTask {
                         continue;
                     }
                     if ((current instanceof Monster) && Settings.mobAcidDamage > 0D) {
-                        if ((current.getLocation().getBlock().getType() == Material.WATER)
-                                || (current.getLocation().getBlock().getType() == Material.STATIONARY_WATER)) {
+                        if ((current.getLocation().getBlock().getType() == Material.WATER)) {
                             ((Monster) current).damage(Settings.mobAcidDamage);
                         }
                     } else if ((current instanceof Animals) && Settings.animalAcidDamage > 0D) {
-                        if ((current.getLocation().getBlock().getType() == Material.WATER)
-                                || (current.getLocation().getBlock().getType() == Material.STATIONARY_WATER)) {
+                        if ((current.getLocation().getBlock().getType() == Material.WATER)) {
                             if (!current.getType().equals(EntityType.CHICKEN) || Settings.damageChickens) {
                                 ((Animals) current).damage(Settings.animalAcidDamage);
                             }
@@ -71,8 +69,7 @@ public class AcidTask {
                     Set<UUID> newItemsInWater = new HashSet<>();
                     for (Entity current: entList) {
                         if (current.getType() != null && current.getType().equals(EntityType.DROPPED_ITEM)) {
-                            if ((current.getLocation().getBlock().getType() == Material.WATER)
-                                    || (current.getLocation().getBlock().getType() == Material.STATIONARY_WATER)) {
+                            if ((current.getLocation().getBlock().getType() == Material.WATER)) {
                                 //plugin.getLogger().info("DEBUG: Item in water " + current.toString());
                                 // Check if this item was in the list last time
                                 if (itemsInWater.contains(current.getUniqueId())) {

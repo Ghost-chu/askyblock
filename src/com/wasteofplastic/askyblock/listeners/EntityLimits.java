@@ -213,8 +213,8 @@ public class EntityLimits implements Listener {
                         for (ItemStack itemInHand: Util.getPlayerInHandItems((Player) entity)) {
                             if (itemInHand != null) {
                                 Material type = itemInHand.getType();
-                                if (type == Material.EGG || type == Material.MONSTER_EGG || type == Material.WHEAT || type == Material.CARROT_ITEM
-                                        || type == Material.SEEDS) {
+                                if (type == Material.EGG || type == Material.MONSTER_EGG || type == Material.WHEAT || type == Material.CARROT
+                                        || type == Material.BEETROOT_SEEDS|| type == Material.MELON_SEEDS|| type == Material.PUMPKIN_SEEDS|| type == Material.WHEAT_SEEDS|| type == Material.GOLDEN_CARROT|| type == Material.GOLDEN_APPLE) {
                                     if (DEBUG2)
                                         plugin.getLogger().info("Player used egg or did breeding ");
                                     if (!culprits.contains((Player)entity)) {

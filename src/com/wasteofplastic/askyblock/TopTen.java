@@ -65,7 +65,7 @@ public class TopTen implements Listener, Requester {
     private final int[] SLOTS = new int[] {4, 12, 14, 19, 20, 21, 22, 23, 24, 25};
     private final Material[] ICONS = new Material[] {
             Material.DIAMOND_AXE,
-            Material.GOLD_AXE,
+            Material.GOLDEN_AXE,
             Material.IRON_AXE,
             Material.DIAMOND_BLOCK,
             Material.GOLD_BLOCK,
